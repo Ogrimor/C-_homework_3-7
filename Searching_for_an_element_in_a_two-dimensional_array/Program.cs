@@ -32,6 +32,21 @@ void printArr(double[,] arr)
 }
 
 int arrayСolumns = GetValue("Введите количество строк массива: ");
-int arrayStrings = GetValue("Введите количество столбцов массива: ");
+int arrayStrings = GetValue("Введите количество стобцов массива: ");
 double[,] array  = GetArray(arrayСolumns, arrayStrings);
 printArr(array);
+int getColumns = GetValue("Введите желаемый строку массива: ");
+int getStrings = GetValue("Введите желаемую столбец массива: ");
+
+if (getColumns-1 <= arrayСolumns || getStrings-1 <=arrayStrings)
+{
+    Console.WriteLine(array[getColumns-1,getStrings-1]);
+}
+else
+{
+    Console.WriteLine("Такого элемента нет в массиве");
+}
+
+
+
+
